@@ -1,10 +1,12 @@
 height = int(input())
-worked = 0
+current_height = height
 
-while worked < height:
-    tmp_height = int(input())
-    if tmp_height < 0:
-        worked -= tmp_height
-        print('Продолжаем движение.')
+while current_height > 0:
+    move = int(input())
+    current_height += move
     
-print('Наконец-то!')
+    if current_height <= 0:
+        print('Наконец-то!')
+        break
+    else:
+        print('Продолжаем движение.')
